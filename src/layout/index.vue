@@ -2,7 +2,7 @@
   <el-container>
     <el-aside width="200px"><app-aside /></el-aside>
     <el-container>
-      <el-header>Header</el-header>
+      <el-header><app-header /></el-header>
       <el-main><router-view /></el-main>
     </el-container>
   </el-container>
@@ -13,7 +13,8 @@ import Vue from 'vue'
 export default Vue.extend({
   name: 'AdvertIndex',
   components: {
-    AppAside: () => import('./components/app-aside.vue')
+    AppAside: () => import('./components/app-aside.vue'),
+    AppHeader: () => import('./components/app-header.vue')
   },
   data() {
     return {}
@@ -27,7 +28,6 @@ export default Vue.extend({
 }
 .el-header,
 .el-footer {
-  background-color: #b3c0d1;
   color: #333;
   text-align: center;
   line-height: 60px;
