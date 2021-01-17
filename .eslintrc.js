@@ -20,6 +20,7 @@ module.exports = {
         requireLast: true
       }
     }],
+    '@typescript-eslint/no-explicit-any': 'off',
     'space-before-function-paren': 'off'
   }
 }
