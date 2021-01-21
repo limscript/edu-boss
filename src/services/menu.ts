@@ -1,7 +1,7 @@
 /*
  * @Author: limscript
  * @Date: 2021-01-17 16:11:56
- * @LastEditTime: 2021-01-17 17:06:39
+ * @LastEditTime: 2021-01-19 21:18:04
  * @LastEditors: limscript
  * @Description: 菜单相关请求模块
  */
@@ -15,7 +15,7 @@ export const createOrUpdateMenu = (data: any) => {
   })
 }
 
-export const getEditMenuInfo = (id = -1) => {
+export const getEditMenuInfo = (id: string | number = -1) => {
   return request({
     method: 'GET',
     url: '/boss/menu/getEditMenuInfo',
