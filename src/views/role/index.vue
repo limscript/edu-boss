@@ -1,13 +1,15 @@
 <template>
-  <div class="advert">广告管理</div>
+  <div class="role">
+    <role-list></role-list>
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import RoleList from './components/list.vue'
 export default Vue.extend({
-  name: 'AdvertIndex',
-  data() {
-    return {}
+  components: {
+    RoleList
   }
 })
 </script>

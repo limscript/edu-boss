@@ -1,7 +1,7 @@
 /*
  * @Author: limscript
  * @Date: 2021-01-13 21:06:23
- * @LastEditTime: 2021-01-13 21:26:50
+ * @LastEditTime: 2021-02-13 22:51:23
  * @LastEditors: limscript
  * @Description: 用户相关请求模块
  */
@@ -30,5 +30,23 @@ export const getUserInfo = () => {
   return request({
     method: 'GET',
     url: '/front/user/getInfo'
+  })
+}
+
+export const getUserPages = (data: any) => {
+  return request({
+    method: 'POST',
+    url: '/boss/user/getUserPages',
+    data
+  })
+}
+
+export const forbidUser = (userId: string | number) => {
+  return request({
+    method: 'POST',
+    url: '/boss/user/forbidUser',
+    params: {
+      userId
+    }
   })
 }

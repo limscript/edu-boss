@@ -57,7 +57,8 @@
 <script lang="ts">
 import Vue from 'vue'
 import { Form } from 'element-ui'
-import { getResourcePages, getResourceCategories } from '@/services/resource'
+import { getResourcePages } from '@/services/resource'
+import { getResourceCategories } from '@/services/resource-category'
 
 export default Vue.extend({
   data() {

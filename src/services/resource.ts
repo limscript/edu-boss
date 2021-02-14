@@ -1,7 +1,7 @@
 /*
  * @Author: limscript
  * @Date: 2021-01-20 16:11:56
- * @LastEditTime: 2021-01-20 20:53:32
+ * @LastEditTime: 2021-02-13 22:16:08
  * @LastEditors: limscript
  * @Description: 资源相关请求模块
  */
@@ -15,9 +15,27 @@ export const getResourcePages = (data: any) => {
   })
 }
 
-export const getResourceCategories = () => {
+export const getAllResources = () => {
   return request({
     method: 'GET',
-    url: '/boss/resource/category/getAll'
+    url: '/boss/resource/getAll'
+  })
+}
+
+export const allocateRoleResources = (data: any) => {
+  return request({
+    method: 'POST',
+    url: '/boss/resource/allocateRoleResources',
+    data
+  })
+}
+
+export const getRoleResources = (roleId: string | number) => {
+  return request({
+    method: 'GET',
+    url: '/boss/resource/getRoleResources',
+    params: {
+      roleId
+    }
   })
 }
