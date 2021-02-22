@@ -80,6 +80,23 @@ const routes: Array<RouteConfig> = [
         name: 'alloc-resource',
         props: true,
         component: () => import(/* webpackChunkName: 'alloc-resource' */ '@/views/role/alloc-resource.vue')
+      },
+      {
+        path: '/course/create',
+        name: 'course-create',
+        component: () => import(/* webpackChunkName: 'course-create' */ '@/views/course/create.vue')
+      },
+      {
+        path: '/course/:courseId/edit',
+        name: 'course-edit',
+        component: () => import(/* webpackChunkName: 'course-edit' */ '@/views/course/edit.vue'),
+        props: true
+      },
+      {
+        path: '/course/:courseId/section',
+        name: 'course-section',
+        component: () => import(/* webpackChunkName: 'course-section' */ '@/views/course/section.vue'),
+        props: true
       }
     ]
   },

@@ -1,15 +1,19 @@
 <template>
-  <div class="advert">广告管理</div>
+  <div class="course">
+    <course-list />
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import CourseList from './components/CourseList.vue'
+
 export default Vue.extend({
-  name: 'AdvertIndex',
-  data() {
-    return {}
+  name: 'CourseIndex',
+  components: {
+    CourseList
   }
 })
 </script>
-<style lang='scss' scoped>
-</style>
+
+<style lang="scss" scoped></style>
